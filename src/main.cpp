@@ -5,8 +5,8 @@
 
 // Comentario inicial
 
-const char* ssid = "CHRISTIAN 2.4G-5G_ETB";
-const char* password = "BotLAB2018*";
+const char* ssid = "CHRISTIAN 2.4G-5G_ETB"; // ID de la red WiFi
+const char* password = "BotLAB2018*"; // Contraseña de la red WiFi
 
 AsyncWebServer server(80);
 
@@ -18,6 +18,7 @@ void setup() {
     return;
   }
 
+  // Metodo para inicializar la conexión Wifi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
@@ -34,5 +35,5 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
 }
