@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+.ajuste-fuente {
+  font-size: 100px;
+  color: blueviolet;
+}
+
+.fuente {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}

@@ -5,8 +5,8 @@
 
 // Comentario inicial
 
-const char* ssid = "CHRISTIAN 2.4G-5G_ETB"; // ID de la red WiFi
-const char* password = "BotLAB2018*"; // Contraseña de la red WiFi
+const char* ssid = "CHRISTIAN_BARAJAS"; // ID de la red WiFi
+const char* password = "BotLAB2018"; // Contraseña de la red WiFi
 
 AsyncWebServer server(80);
 
@@ -29,6 +29,10 @@ void setup() {
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/index.html", String(), false);
+  });
+
+  server.on("/styles.css", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/styles.css");
   });
 
   server.begin();
